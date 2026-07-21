@@ -4,27 +4,148 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Date Filler</title>
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<h1>Date Filler</h1>
+<div class="container">
 
-<p>Paste your data below:</p>
+    <h1>Date Filler</h1>
 
-    <button id="paste">Paste</button>
+    <p class="subtitle">
+        Fill missing dates, align timelines, and calculate rolling sums.
+    </p>
 
-<textarea id="input" placeholder="Paste your data here..."></textarea>
+    <div class="card">
 
-<br><br>
+        <h2>Input</h2>
 
-<button id="process">Process</button>
+        <textarea
+            id="input"
+            placeholder="Paste your Roblox data here..."
+        ></textarea>
 
-<h2>Output</h2>
-    
-  <button id="copy">Copy Output</button>
+        <div class="buttons">
 
-<textarea id="output" readonly></textarea>
+            <button id="pasteBtn">
+                📋 Paste
+            </button>
+
+            <button id="uploadBtn">
+                📂 Upload TXT
+            </button>
+
+            <input
+                type="file"
+                id="fileInput"
+                accept=".txt"
+                hidden
+            >
+
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Options</h2>
+
+        <label>
+            <input
+                type="checkbox"
+                id="fillDates"
+                checked
+            >
+            Fill Missing Dates
+        </label>
+
+        <label>
+            <input
+                type="checkbox"
+                id="alignGames"
+                checked
+            >
+            Align Games
+        </label>
+
+        <hr>
+
+        <label>
+
+            Rolling Sum
+
+            <select id="rollingDays">
+
+                <option value="0">
+                    None
+                </option>
+
+                <option value="7">
+                    7 Days
+                </option>
+
+                <option value="30">
+                    30 Days
+                </option>
+
+                <option value="90">
+                    90 Days
+                </option>
+
+                <option value="365">
+                    365 Days
+                </option>
+
+                <option value="custom">
+                    Custom
+                </option>
+
+            </select>
+
+        </label>
+
+        <input
+            id="customDays"
+            type="number"
+            min="1"
+            placeholder="Custom Days"
+        >
+
+    </div>
+
+    <div class="buttons">
+
+        <button id="processBtn">
+            ⚙️ Process
+        </button>
+
+        <button id="copyBtn">
+            📄 Copy Output
+        </button>
+
+        <button id="downloadTxtBtn">
+            💾 Download TXT
+        </button>
+
+        <button id="downloadCsvBtn">
+            📊 Download CSV
+        </button>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Output</h2>
+
+        <textarea
+            id="output"
+            readonly
+        ></textarea>
+
+    </div>
+
+</div>
 
 <script src="script.js"></script>
 
