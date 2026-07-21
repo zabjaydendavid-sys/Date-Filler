@@ -3,138 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Date Filler</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <title>Roblox Date Filler</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <div class="container">
 
-    <h1>Date Filler</h1>
+    <h1>Roblox Date Filler</h1>
 
-    <p class="subtitle">
-        Fill missing dates, align timelines, and calculate rolling sums.
+    <p>
+        Align games, fill missing dates, and calculate rolling sums.
     </p>
 
-    <div class="card">
+
+    <div class="box">
 
         <h2>Input</h2>
 
-        <textarea
+        <textarea 
             id="input"
             placeholder="Paste your Roblox data here..."
         ></textarea>
 
-        <div class="buttons">
 
-            <button id="pasteBtn">
-                📋 Paste
-            </button>
+        <button id="uploadBtn">
+            Upload TXT
+        </button>
 
-            <button id="uploadBtn">
-                📂 Upload TXT
-            </button>
+        <input 
+            type="file"
+            id="fileInput"
+            accept=".txt"
+            hidden
+        >
 
-            <input
-                type="file"
-                id="fileInput"
-                accept=".txt"
-                hidden
-            >
-
-        </div>
+        <button id="pasteBtn">
+            Paste
+        </button>
 
     </div>
 
-    <div class="card">
+
+
+    <div class="box">
 
         <h2>Options</h2>
 
-        <label>
-            <input
-                type="checkbox"
-                id="fillDates"
-                checked
-            >
-            Fill Missing Dates
-        </label>
 
         <label>
-            <input
-                type="checkbox"
-                id="alignGames"
-                checked
-            >
-            Align Games
+            Rolling Sum Days:
         </label>
 
-        <hr>
 
-        <label>
+        <select id="rollingDays">
 
-            Rolling Sum
+            <option value="0">
+                None
+            </option>
 
-            <select id="rollingDays">
+            <option value="7">
+                7 Days
+            </option>
 
-                <option value="0">
-                    None
-                </option>
+            <option value="30">
+                30 Days
+            </option>
 
-                <option value="7">
-                    7 Days
-                </option>
+            <option value="90">
+                90 Days
+            </option>
 
-                <option value="30">
-                    30 Days
-                </option>
+            <option value="365">
+                365 Days
+            </option>
 
-                <option value="90">
-                    90 Days
-                </option>
+            <option value="custom">
+                Custom
+            </option>
 
-                <option value="365">
-                    365 Days
-                </option>
+        </select>
 
-                <option value="custom">
-                    Custom
-                </option>
-
-            </select>
-
-        </label>
 
         <input
             id="customDays"
             type="number"
-            min="1"
-            placeholder="Custom Days"
+            placeholder="Custom days"
         >
 
-    </div>
-
-    <div class="buttons">
-
-        <button id="processBtn">
-            ⚙️ Process
-        </button>
-
-        <button id="copyBtn">
-            📄 Copy Output
-        </button>
-
-        <button id="downloadTxtBtn">
-            💾 Download TXT
-        </button>
-
-        <button id="downloadCsvBtn">
-            📊 Download CSV
-        </button>
 
     </div>
 
-    <div class="card">
+
+
+    <button id="processBtn">
+        Process
+    </button>
+
+
+    <button id="copyBtn">
+        Copy Output
+    </button>
+
+
+    <button id="downloadTxtBtn">
+        Download TXT
+    </button>
+
+
+    <button id="downloadCsvBtn">
+        Download CSV
+    </button>
+
+
+
+
+    <div class="box">
 
         <h2>Output</h2>
 
@@ -145,9 +132,13 @@
 
     </div>
 
+
 </div>
 
+
+
 <script src="script.js"></script>
+
 
 </body>
 </html>
