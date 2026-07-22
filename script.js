@@ -339,8 +339,6 @@ processBtn.onclick = () => {
 
 };
 
-};
-
 // ===============================
 // Date Filler - Script Part 3
 // Timeline Alignment
