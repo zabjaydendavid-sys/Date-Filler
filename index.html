@@ -1,142 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Date Filler</title>
 
-    <title>Roblox Date Filler</title>
-
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <div class="container">
 
-    <h1>Roblox Date Filler</h1>
+    <h1>Date Filler</h1>
 
-    <p>
-        Align games, fill missing dates, and calculate rolling sums.
-    </p>
+    <div class="buttons">
 
+        <button id="pasteBtn">Paste</button>
 
-    <div class="box">
+        <button id="uploadBtn">Upload TXT</button>
 
-        <h2>Input</h2>
+        <button id="processBtn">Process</button>
 
-        <textarea 
+        <button id="copyBtn">Copy Output</button>
+
+        <button id="downloadTxtBtn">Download TXT</button>
+
+        <button id="downloadCsvBtn">Download CSV</button>
+
+    </div>
+
+    <input
+        type="file"
+        id="fileInput"
+        accept=".txt"
+        hidden
+    >
+
+    <div class="boxes">
+
+        <textarea
             id="input"
-            placeholder="Paste your Roblox data here..."
+            placeholder="Paste Rolimon's data here..."
         ></textarea>
-
-
-        <button id="uploadBtn">
-            Upload TXT
-        </button>
-
-        <input 
-            type="file"
-            id="fileInput"
-            accept=".txt"
-            hidden
-        >
-
-        <button id="pasteBtn">
-            Paste
-        </button>
-
-    </div>
-
-
-
-    <div class="box">
-
-        <h2>Options</h2>
-
-
-        <label>
-            Rolling Sum Days:
-        </label>
-
-
-        <select id="rollingDays">
-
-            <option value="0">
-                None
-            </option>
-
-            <option value="7">
-                7 Days
-            </option>
-
-            <option value="30">
-                30 Days
-            </option>
-
-            <option value="90">
-                90 Days
-            </option>
-
-            <option value="365">
-                365 Days
-            </option>
-
-            <option value="custom">
-                Custom
-            </option>
-
-        </select>
-
-
-        <input
-            id="customDays"
-            type="number"
-            placeholder="Custom days"
-        >
-
-
-    </div>
-
-
-
-    <button id="processBtn">
-        Process
-    </button>
-
-
-    <button id="copyBtn">
-        Copy Output
-    </button>
-
-
-    <button id="downloadTxtBtn">
-        Download TXT
-    </button>
-
-
-    <button id="downloadCsvBtn">
-        Download CSV
-    </button>
-
-
-
-
-    <div class="box">
-
-        <h2>Output</h2>
 
         <textarea
             id="output"
             readonly
+            placeholder="Output..."
         ></textarea>
 
     </div>
 
-
 </div>
 
-
-
 <script src="script.js"></script>
+
 </body>
 </html>
