@@ -165,41 +165,6 @@ processBtn.onclick = () => {
 };
 
 
-    let games =
-        parseGames(
-            inputBox.value
-        );
-
-
-    let aligned =
-        alignTimeline(
-            games
-        );
-
-
-    outputBox.value =
-        JSON.stringify(
-            aligned,
-            null,
-            2
-        );
-
-
-};
-
-    if(inputBox.value.trim() === ""){
-
-        alert("Paste data first!");
-
-        return;
-
-    }
-
-
-    outputBox.value =
-        "Parser coming in Part 2...\n\n" +
-        inputBox.value;
-
     // ===============================
 // Date Filler - Script Part 2
 // Roblox Data Parser
