@@ -1,58 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Date Filler</title>
-
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Filler</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-<div class="container">
+<h1>Date Filler</h1>
 
-    <h1>Date Filler</h1>
+<p>Paste your data below:</p>
 
-    <div class="buttons">
+<textarea id="input" placeholder="Paste your data here..."></textarea>
 
-        <button id="pasteBtn">Paste</button>
+<br><br>
 
-        <button id="uploadBtn">Upload TXT</button>
+<button id="paste">📋 Paste</button>
+<button id="process">⚙️ Process</button>
+<button id="copy">📄 Copy Output</button>
 
-        <button id="processBtn">Process</button>
+<h2>Output</h2>
 
-        <button id="copyBtn">Copy Output</button>
-
-        <button id="downloadTxtBtn">Download TXT</button>
-
-        <button id="downloadCsvBtn">Download CSV</button>
-
-    </div>
-
-    <input
-        type="file"
-        id="fileInput"
-        accept=".txt"
-        hidden
-    >
-
-    <div class="boxes">
-
-        <textarea
-            id="input"
-            placeholder="Paste Rolimon's data here..."
-        ></textarea>
-
-        <textarea
-            id="output"
-            readonly
-            placeholder="Output..."
-        ></textarea>
-
-    </div>
-
-</div>
+<textarea id="output" readonly></textarea>
 
 <script src="script.js"></script>
 
