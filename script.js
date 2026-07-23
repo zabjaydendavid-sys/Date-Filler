@@ -1,37 +1,50 @@
-const input = document.getElementById("input");
-const output = document.getElementById("output");
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Filler</title>
 
-// Paste button
-document.getElementById("paste").addEventListener("click", async () => {
-    try {
-        input.value = await navigator.clipboard.readText();
-    } catch {
-        alert("Clipboard access denied.");
-    }
-});
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-// Process button
-document.getElementById("process").addEventListener("click", () => {
-    if (!input.value.trim()) {
-        alert("Please paste your data first.");
-        return;
-    }
+<div class="container">
 
-    // Placeholder until we add the parser
-    output.value = "Processing...\n\n" + input.value;
-});
+    <h1>📅 Date Filler</h1>
 
-// Copy Output button
-document.getElementById("copy").addEventListener("click", async () => {
-    if (!output.value.trim()) {
-        alert("Nothing to copy.");
-        return;
-    }
+    <div class="toolbar">
+        <button id="paste">📋 Paste</button>
+        <button id="process">⚙️ Process</button>
+        <button id="copy">📄 Copy Output</button>
+    </div>
 
-    try {
-        await navigator.clipboard.writeText(output.value);
-        alert("Output copied!");
-    } catch {
-        alert("Failed to copy.");
-    }
-});
+    <div class="main">
+
+        <div class="panel">
+            <h2>📥 Input</h2>
+
+            <textarea
+                id="input"
+                placeholder="Paste your data here..."
+            ></textarea>
+        </div>
+
+        <div class="panel">
+            <h2>📤 Output</h2>
+
+            <textarea
+                id="output"
+                readonly
+                placeholder="Processed data..."
+            ></textarea>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
