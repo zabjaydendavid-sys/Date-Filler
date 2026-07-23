@@ -4,25 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Date Filler</title>
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<h1>Date Filler</h1>
+<div class="container">
 
-<p>Paste your data below:</p>
+    <h1>📅 Date Filler</h1>
 
-<textarea id="input" placeholder="Paste your data here..."></textarea>
+    <div class="toolbar">
 
-<br><br>
+        <button id="paste">📋 Paste</button>
 
-<button id="paste">📋 Paste</button>
-<button id="process">⚙️ Process</button>
-<button id="copy">📄 Copy Output</button>
+        <button id="process">⚙️ Process</button>
 
-<h2>Output</h2>
+        <button id="copy">📄 Copy Output</button>
 
-<textarea id="output" readonly></textarea>
+    </div>
+
+    <div class="main">
+
+        <div class="panel">
+
+            <h2>📥 Input</h2>
+
+            <textarea
+                id="input"
+                placeholder="Paste your Rolimon's data here..."
+            ></textarea>
+
+        </div>
+
+        <div class="panel">
+
+            <h2>📤 Output</h2>
+
+            <textarea
+                id="output"
+                readonly
+                placeholder="Processed data will appear here..."
+            ></textarea>
+
+        </div>
+
+    </div>
+
+</div>
 
 <script src="script.js"></script>
 
